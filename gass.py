@@ -47,7 +47,7 @@ def extract_domains_from_file(filename):
         return set()
 
 def save_domains(domains, output_file='domain.txt'):
-    with open(output_file, 'w') as out:
+    with open(output_file, 'w', encoding='utf-8') as out:
         for domain in sorted(domains):
             out.write(domain + '\n')
     print(Fore.CYAN + f"\n[+] Total {len(domains)} domain disimpan di '{output_file}'")
